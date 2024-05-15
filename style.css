@@ -72,3 +72,8 @@ body {
     margin-top: 32px;
     padding: 24px;
 }
+
+.parametro-titulo{
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+}
