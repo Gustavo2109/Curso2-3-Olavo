@@ -29,6 +29,11 @@ function aumentaTamanho() {
 const campoSenha = document.querySelector('#campo-senha');
 const checkbox = document.querySelectorAll('.checkbox');
 
+for (i=0; i < checkbox.length;i++){
+    checkbox[i].onclick = geraSenha;
+}
+
+
 console.log(checkbox[1].checked);
 
 
@@ -40,6 +45,11 @@ const simbolos = '!@%*?';
 geraSenha();
 
 function geraSenha() {
+    let alfabeto = '';
+    if (checkbox[0].checked){
+        alfabeto = alfabeto + letrasMaiusculas;
+    }
+    console.log(alfabeto);
     let senha = '';
     for (let i = 0; i < tamanhoSenha; i++) {
         let numeroAleatorio = Math.random() * letrasMaiusculas.length;
